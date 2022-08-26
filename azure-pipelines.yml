@@ -31,3 +31,8 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo' # Available options: 'JaCoCo', 'Cobertura'
+    summaryFileLocation:
